@@ -3,11 +3,11 @@ class UserDatatable < AjaxDatatablesRails::Base
   def_delegators :@view, :link_to, :user_path, :edit_user_path
 
   def sortable_columns
-    @sortable_columns ||= ['users.name', 'users.phone', 'users.address']
+    @sortable_columns ||= ['User.name', 'User.phone', 'User.address']
   end
 
   def searchable_columns
-    @searchable_columns ||= ['users.name', 'users.phone', 'users.address']
+    @searchable_columns ||= ['User.name', 'User.phone', 'User.address']
   end
 
   private
