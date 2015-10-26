@@ -4,6 +4,7 @@ $ ->
     serverSide: true
     ajax: $('#users-table').data('source')
     pagingType: 'full_numbers'
+    order: [[0, "desc"]]
     columns: [
       {data: "name"},
       {data: "phone"},
