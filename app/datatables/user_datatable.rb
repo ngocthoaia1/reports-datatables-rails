@@ -11,13 +11,18 @@ class UserDatatable < AjaxDatatablesRails::Base
 
   private
 
+  def sort_records(records)
+    params[:columns].keys.each{ |k| params[:columns][k][:data] = k}
+    super
+  end
+
   def data
     records.map do |record|
-      [
-        record.name,
-        record.phone,
-        record.address
-      ]
+      {
+        name: record.name,
+        phone: record.phone,
+        address: record.address
+      }
     end
   end
 

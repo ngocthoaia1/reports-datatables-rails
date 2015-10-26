@@ -1,0 +1,13 @@
+.dataTables_wrapper {
+  th, td {
+    border-right: 1px solid #777;
+    border-top: 1px solid #777;
+  }
+  th {
+    text-align: left;
+  }
+  .action-edit, .action-destroy {
+    width: 120px;
+    text-align: center;
+  }
+}
