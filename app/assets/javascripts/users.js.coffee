@@ -14,3 +14,5 @@ $ ->
     aoColumnDefs: [
       {sClass: "align-center", aTargets: [3, 4]}
     ]
+    language:
+      search: "Search here:"
