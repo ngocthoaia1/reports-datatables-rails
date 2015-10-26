@@ -8,8 +8,8 @@ $ ->
       {data: "name"},
       {data: "phone"},
       {data: "address"},
-      {data: "edit"},
-      {data: "destroy"}
+      {data: "edit", bSortable: false, bSearchable: false},
+      {data: "destroy", bSortable: false, bSearchable: false}
     ]
     aoColumnDefs: [
       {sClass: "align-center", aTargets: [3, 4]}
