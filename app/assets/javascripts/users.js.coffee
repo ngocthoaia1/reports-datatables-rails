@@ -11,3 +11,6 @@ $ ->
       {data: "edit"},
       {data: "destroy"}
     ]
+    aoColumnDefs: [
+      {sClass: "align-center", aTargets: [3, 4]}
+    ]
