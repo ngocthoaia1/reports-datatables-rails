@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
+gem 'kaminari'
