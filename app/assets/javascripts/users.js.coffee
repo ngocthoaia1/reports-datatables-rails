@@ -2,7 +2,11 @@ $ ->
   $('#users-table').dataTable
     processing: true
     serverSide: true
-    ajax: $('#users-table').data('source')
+    ajax:
+      url: $("#users-table").data("source")
+      data: (d) ->
+        d.test_data = "test_data"
+        return
     pagingType: 'full_numbers'
     order: [[0, "desc"]]
     columns: [
