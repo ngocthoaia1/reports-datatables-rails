@@ -7,5 +7,7 @@ $ ->
     columns: [
       {data: "name"},
       {data: "phone"},
-      {data: "address"}
+      {data: "address"},
+      {data: "edit"},
+      {data: "destroy"}
     ]

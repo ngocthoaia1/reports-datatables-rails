@@ -1,5 +1,6 @@
 class UserDatatable < AjaxDatatablesRails::Base
   include AjaxDatatablesRails::Extensions::Kaminari
+  def_delegators :@view, :link_to, :user_path, :edit_user_path
 
   def sortable_columns
     @sortable_columns ||= ['users.name', 'users.phone', 'users.address']
@@ -19,9 +20,12 @@ class UserDatatable < AjaxDatatablesRails::Base
   def data
     records.map do |record|
       {
-        name: record.name,
+        name: link_to(record.name, user_path(record)),
         phone: record.phone,
-        address: record.address
+        address: record.address,
+        edit: link_to('Edit', edit_user_path(record)),
+        destroy: link_to('Destroy', user_path(record),
+          data: {confirm: "Are you sure?"}, method: :delete)
       }
     end
   end
